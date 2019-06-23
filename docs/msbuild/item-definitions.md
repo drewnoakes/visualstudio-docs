@@ -55,7 +55,7 @@ In this example, the default metadata "m" is applied to Item "i" because metadat
 > XML Element and Parameter names are case\-sensitive. Item metadata and Item\/Property names are not case\-sensitive. Therefore, ItemDefinitionGroup items that have names that differ only by case should be treated as the same ItemGroup.
 
 ## Value sources
-The values for metadata that is defined in an ItemDefinitionGroup can come from many different sources, as follows:
+An ItemDefinitionGroup's metadata values can come from many different sources, as follows:
 
 - PropertyGroup Property
 
@@ -183,7 +183,7 @@ In the above example, item "i" references item "test" in its Condition. This Con
 In the above example, "m" would be set to the value "m1" as the Condition references item "i"'s metadata value for item "yes."
 
 ## Override and delete metadata
-Metadata defined in an ItemDefinitionGroup element can be overridden in a later ItemDefinitionGroup element by setting the metadata value to blank. You can also effectively delete a metadata item by setting it to an empty value. For example:
+Metadata defined in an ItemDefinitionGroup element can be overridden in a later ItemDefinitionGroup element. You can effectively delete a metadata item by overriding it with an empty value. For example:
 
 ```xml
 <ItemDefinitionGroup>
