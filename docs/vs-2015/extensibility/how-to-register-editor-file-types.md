@@ -22,7 +22,7 @@ The easiest way to register editor file types is by using the registration attri
   
 1. Provide the <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> class with the appropriate parameters for your editor in the class of your VSPackage.  
   
-    ```  
+    ```c#
     [Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute(typeof(EditorFactory), ".Sample", 32,   
          ProjectGuid = "{A2FE74E1-B743-11d0-AE1A-00A0C90FFFC3}",   
          TemplateDir = "..\\..\\Templates",   
@@ -41,7 +41,7 @@ The easiest way to register editor file types is by using the registration attri
   
      In your implementation of the <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> method, call the <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> method and pass the instance of your editor factory as demonstrated below.  
   
-    ```  
+    ```c#
     protected override void Initialize()  
     {  
         Trace.WriteLine (string.Format(CultureInfo.CurrentCulture,   
@@ -92,7 +92,7 @@ The easiest way to register editor file types is by using the registration attri
   
      The editor factory is registered in the <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> implementation.  
   
-    ```  
+    ```c#
     // create editor factory.  
     if (m_srpEdFact == NULL)   
     {  
